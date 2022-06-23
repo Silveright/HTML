@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>텍스트 입력 예제</title>
+  </head>
+ <body>
+	<h3>문자열, 암호입력 및 텍스트 영역</h3>
+	<!-- 넘긴 값 표시가 되지 않음 -->
+	<form method ="post" action="result.html">
+			아이디: &nbsp;
+		<!--  입력한 값을 서버에서 쿼리스트링으로 받아오기 위해 name값이 필수적이다.
+			  name:요소의 이름,value:초기 텍스트
+			  maxLength:입력할 수 있는 최대 문자 개수
+			  result링크 결과 result.html -->	
+		<input type="text" value="...ID 입력..." name="id"><br>
+		비밀번호: <input type="password" name="pwd" maxLength="3" ><br>
+		 
+		 나 보여요? <input type="hidden" name="hide" value="난 안보여"><br>
+		 <!--  화면에는 안보이게 값을 처리하고자 할 때 사용 ex)글번호, 답변글의 ref,lev..-->
+		 <input type="submit" value="회원가입">
+		
+		</form>
+	
+ </body>
+</html>
