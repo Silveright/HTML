@@ -1,0 +1,29 @@
+<!-- 각 태그에는 4종류의 스타일 시트가 적용될 수 있다.
+	1. 브라우저의 디폴트 스타일
+	2. css 스타일 시트 파일에 작성된 스타일
+	3. <style></style>요소에 작성된 스타일
+	4. 태그안의 style 속성에 작성된 스타일-->
+	 
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>스타일 시트 선언 방법: 3. 인라인 스타일시트</title>
+  	<!-- 스타일 시트 작성시작 -->
+  	<style>
+  		body{background: linen;}
+  		 h3 {color: red; font-style:italic} /*h3요소 색상을 빨간색으로 적용*/
+  		 p {font-size:10pt} /*p요소 글자크기를 10pt로 적용*/
+  		 strong{color:blue}
+  	</style>
+  	<!-- 스타일 시트 작성 끝 -->
+  
+  </head>
+ <body>
+	<h3>인라인 스타일시트 이해하기-해당 태그에만 속성을 지정한다.</h3>
+	<P>이 예제는 
+	<strong style="color:green; font-style:italic">CSS</strong>의 개념을 설명합니다.
+	</P>
+	<p>다음예제로 이어집니다.</p>
+ </body>
+</html>

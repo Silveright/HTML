@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>그룹핑 예제</title>
+  </head>
+ <body>
+	<h3>도서 검색</h3>
+	<form method="get" action="result.html">
+	 <fieldset><!-- 폼 양식을 그룹핑하는 범위를 지정 -->
+	 	<legend>로그인</legend> <!-- 그룹을 구분하기 위한 제목 라벨로 한번만 사용 -->
+	 	<label>아이디: <input type="text" name="id" size=20 id=user_id><br></label>
+	 	<!--  input 요소의 너비는 속성 size로 조절하며 속성값(기본값:20)은 문자수를 의미 -->
+	 	<!--  input 요소의 type 속성값이 email,password, serach, tel, text, url에서 적용-->
+		<label>비밀번호 :
+	 	<input type="password" name="pw" size=20 id= user_pw>
+		</label>
+	 </fieldset>
+	 <br>
+	<fieldset>
+	 	<legend>통합 검색</legend> 
+	 	<label>도서명: 
+	 	<input type="text" name="book_search" size=50 id= book_name>
+	 	</label>
+	 	<!-- size 50은 20보다 더 긴 입력상자가 나타남 -->
+	 	<br>검색범위 :
+	 	<label>
+	 	<input type="radio" name="s_type" value= keyword id=keword>
+	 	키워드</label>
+	 	
+	 	<label>
+	 	<input type="radio" name="s_type" value= content id=content>
+	 	본문내용</label>
+	 	
+		<br>
+		<label>
+		<input type="checkbox" name="d_type" value="all">전체
+		</label>
+		<label>
+		<input type="checkbox" name="d_type" value="book">단행본
+		</label>
+		<label>
+		<input type="checkbox" name="d_type" value="paper">학술지
+		</label>
+		<label>
+		<input type="checkbox" name="d_type" value="non_book">비도서
+		</label>
+		
+	</fieldset>
+		<br>
+		<button type= "submit">검색</button>		
+		<button type= "reset">지우기</button>		
+	</form>
+	
+ </body>
+</html>

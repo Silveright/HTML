@@ -1,0 +1,39 @@
+<!-- 각 태그에는 4종류의 스타일 시트가 적용될 수 있다.
+	1. 브라우저의 디폴트 스타일
+	2. css 스타일 시트 파일에 작성된 스타일
+	3. <style></style>요소에 작성된 스타일
+	4. 태그안의 style 속성에 작성된 스타일-->
+	 
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>클래스와 아이디</title>
+  	<!-- 스타일 시트 작성시작 -->
+  	<style>
+  		/*red1 클래스 선택자(class="red1")*/
+  		.red1{color: red;font-style:italic;}
+  		
+  		/*strong태그 중 red1클래스 선택자*/
+		strong.red1 {font-size:22pt}
+		
+		p{font-family:"고딕, 돋움"; font-size:10pt}
+		/*폰트의 경우 고딕이 없으면 돋움 글꼴을 찾으라는 의미:
+		  속성값이 여러개로 컴마로 구분하여 나열되는 경우 순서대로 가능한 속성값을 찾아서 적용한다.*/
+		
+		/*next 아이디 선택자(id="next")*/
+		#next{color:blue; text-align:center}
+  	</style>
+  	<!-- 스타일 시트 작성 끝 -->
+  
+  </head>
+ <body>
+	<h3 class="red1">스타일시트 이해하기</h3>
+	<P>
+	이 예제는 <strong class="red1">CSS</strong>의 개념을 설명합니다.
+	<br><span class="red1">클래스</span>와 ID로 스타일을 지정합니다.
+	</P>
+	<p id="next">다음 예제로 이어집니다.</p>
+	<strong>하하</strong>
+ </body>
+</html>

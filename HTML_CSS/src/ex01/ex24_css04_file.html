@@ -1,0 +1,26 @@
+<!-- 각 태그에는 4종류의 스타일 시트가 적용될 수 있다.
+	1. 브라우저의 디폴트 스타일
+	2. css 스타일 시트 파일에 작성된 스타일
+	3. <style></style>요소에 작성된 스타일
+	4. 태그안의 style 속성에 작성된 스타일-->
+	 
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>스타일 시트 선언 방법: 1. 외부 스타일시트</title>
+  	<!-- rel 속성: 링크된 문서와의 관계(Relationship) 지정
+  		 href 속성: 링크할 파일의 위치 정보지정
+  		 type 속성: 속성 값으로 text/css를 지정.(text 유형의 css파일)
+  		 head 태그에서 사용하며
+  		 외부 스타일 시트에는 style 태그 없이 cs 스타일 시트만 저장해야 한다. -->
+  	
+  <link rel="stylesheet" type="text/css" href="css/extern.css">
+  </head>
+ <body>
+	<h3>스타일시트 이해하기</h3>
+	<P>이 예제는 
+	<strong>CSS</strong>의 개념을 설명합니다.
+	</P>
+ </body>
+</html>

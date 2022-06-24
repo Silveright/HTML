@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>가상 요소(pseudo element)선택자-'::'기호를 사용하는 선택자</title>
+
+	 
+  	<!-- 스타일 시트 작성시작 -->
+  	<style>
+  		p{font-size:10pt;}/*text-decoration: none; 밑줄이 사라진다.*/
+  		/*attr(href)- href의 속성값을 표시한다.*/
+  		a:link { color: blue;}
+  		a:visited{color:green;}
+  		a:active { color:yellow;}
+  		
+  		/*p요소의 첫글자*/
+  		p::first-letter {font-size:12pt;
+  						 background-color:silver}
+  						 
+  		/*h3요소 앞에 content◆의 값 삽입*/	
+  		h3::before{content:"◆";color:blue}
+  		/*h3요소 뒤에 content의 값((css))삽입하고 폰트의 크기 적용*/
+  		h3::after{content: " (ⓒcss)"; font-size:20pt}
+  	
+  	</style>
+  	<!-- 스타일 시트 작성 끝 -->
+  
+  </head>
+ <body>
+	<h3><strong>스타일시트</strong> 이해하기</h3>
+	<p>이 예제는 <strong>CSS</strong>의 개념을 설명합니다.</p>
+	<p>선택자에 <a href="http://www.w3.org/">가상요소 선택자</a>와
+	<a href="http://www.naver.com"> 선택자 조합</a>을 적용하여 스타일을 지정합니다.
+	</p>
+ </body>
+</html>
