@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>전환효과의 지정</title>
+	<style>
+	/*전환(transition)이란 HTML 태그에 적용된 CSS3 속성값의 변화를 서서히 진행시켜
+	애니메이션 효과를 나타낸다.
+	형식) 선택자 {transition: 프로퍼티 시간}
+	예) #title:hover{transition: border 4s}
+		테두리가 4초동안 점진적으로 변한다.*/
+		
+	#title:hover{
+		border: thick dotted  blue;
+		padding:4px;
+		background-color: yellow;
+		font-size: xx-Large;
+		transition: border 4s, background-color 8s;
+		/*테두리가 4초, 배경색은 8초 동안 점진적으로 변한다.*/
+	}
+	
+	#strawberry{
+		position: absolute;
+		top:5px;
+		right:60px;
+	}
+	
+	#strawberry:hover{
+		border: thin solid red;
+		width: 108px;
+		height: 132px;
+		/*폭이 4초 동안 점진적으로 변한다.*/
+		transition: width 4s;
+	}
+	</style>
+  </head>
+<body>
+	<h3>새로운 문서 표준<span id=title>HTML5</span></h3>
+	<img src="image/Strawberry.png" id=strawberry width=54px height=66px>
+	<p>HTML 5는 별도 프로그램을 깔지 않아도 인터넷 브라우저상에서 화려한 그래픽 효과를 구현하며, 음악ㆍ동영상을 자유롭게 감상할 수 있는 마크업 언어(markup language)이다.
+		2004년부터  HTML 5 표준화 그룹인 WHATWG(Web Hypertext Application Technology Working Group)는 HTML 5를 HTML의 차기 핵심 표준으로 만들기 위한 
+		세부 작업을 시작하였고, 2014년 10월 웹표준화기구 월드와이드컨소시엄(W3C)은 HTML 5을 웹표준으로 선정했다. 
+		이에 따라 애플ㆍ마이크로소프트(MS), 구글, 페이스북 등 글로벌 IT 기업들은 HTML 5 시대 주도권을 잡기 위해 치열한 경쟁에 돌입하기도 했다.  
+	</p>
+</body>
+</html>

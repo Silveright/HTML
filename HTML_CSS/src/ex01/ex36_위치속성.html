@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- 화면을 가로로 줄여보기 -->
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>CSS Property Basic</title>
+	<style>
+	.box{
+		width:100px;
+		height:100px;
+		position:absolute;
+	}
+	
+	.box:nth-child(1){
+		background-color:red;
+		left: 10px;
+		top:10px;
+		z-index:100;
+	}
+	.box:nth-child(2){
+		background-color:green;
+		left: 50px;
+		top:50px;
+		z-index:10;
+	}
+	.box:nth-child(3){
+		background-color:blue;
+		left: 90px;
+		top:90px;
+		z-index:1;
+	}
+	</style>
+  </head>
+<body>
+	<h1>전 h1 태그입니다.</h1>
+	<div>
+		<div class=box></div>
+		<div class=box></div>
+		<div class=box></div>
+	</div>
+	<h1>전 h1 태그입니다.</h1>
+</body>
+</html>

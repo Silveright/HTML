@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>transform(변환)</title>
+	<!-- 텍스트나 이미지를 회전이나 확대등 다양한 기하학적인 모양으로 출력할 수 있다.
+	 	 변환에서 사용되는 회전 각도의 단위는 deg(각도-degree)이며 시계방향으로 회전한다. -->
+	<style>
+	div{
+		display:inline-block;
+		padding:5px;
+		color:white;
+		background:olivedrab;
+	}
+	
+	
+	/*태그를 y축으로 100px만큼 이동*/
+	div#translate{
+		transform:translateY(100px);
+	}
+	/*태그를 x축으로 50px y축으로 200px만큼 이동*/
+	div#translate:hover{
+		transform:translate(50px, 200px)
+	}
+	</style>
+  </head>
+<body>
+	<h3>다양한 Transform</h3>
+	아래는 이동(translate)이 적용된다.
+	또한 마우스를 올리면 추가적 변환이 일어난다.
+	<hr>
+	<br><br><br>
+	<div id=translate>translateY(100px)->translate(50px, 200px)</div>
+</body>
+</html>

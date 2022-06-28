@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 화면을 가로로 줄여보기 -->
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>CSS Property</title>
+	<style>
+	li {list-style-type: none; /*목록 마커의 종류 지정: 마커를 사용하지 않음*/
+		float:left;
+		width:60px;
+		padding: 20px; /*글자가 가운데 위치하도록 함*/
+		text-align:center;
+	}
+	
+	
+	p{  clear:left;
+		margin-left:50px;
+		}
+	
+	li:first-child {
+	 border-radius:  10px 0 0 10px ;
+	}
+
+	li:last-child{
+	 border-radius:0 10px 10px 0;
+	}
+
+	li:nth-child(2n) { 
+		background-color:red;
+	}
+
+	li:nth-child(2n+1) { 
+		background-color:#800000;
+	}
+
+	
+	
+	</style>
+  </head>
+ <body>
+    <ul>
+        <li>first</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+    </ul>
+    <p>나는 꿈툴이입니다.</p>
+</body>
+
+</html>
