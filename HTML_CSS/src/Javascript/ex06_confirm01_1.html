@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>confirm: [확인] [취소] 버튼이 있는 대화상자</title>
+  </head>
+ <body>
+	<script>
+	/*확인 : true, 취소: false*/
+	var answer = confirm("장바구니로 이동할까요?");
+	var list ="Answer = " +answer +"<br>";
+	
+	if(answer){
+		list += "<p>장바구니에 물건이 잘~ 담겼습니다.<p>"+"<img src='../ex01/image/Strawberry.png' width=300px> ";
+	}else{
+		list += "<style> body{background:yellow}</style>";
+	}
+		  document.body.innerHTML = list;
+	</script>
+ </body>
+</html>

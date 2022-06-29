@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- script가 body안에 있는 경우 body에 접근할 수 있다.
+ document.body.innerHTML인 경우 기존에 body내용을 삭제하고 덮어쓰기 때문에
+ 처음에 나오는 p태그는 나타나지 않는다. -->
+<html>
+  <head>
+  	<title>Screen Output</title>
+	<meta charset="UTF-8">
+	<style>
+	table{text-align:center; margin: 0 auto;}
+	th:first-child{
+		width:100px; height:50px
+	}
+	th:last-child{
+		width:500px
+	}
+	td{height:40px}
+	caption{font-size: 30px;
+			color:#e56077}
+	
+	tr:first-child{
+		background-color: black; color:white
+	}
+	tr:nth-child(2n){
+		background-color: pink
+	}
+	tr:hover{
+		background-color: orange;
+	}
+	
+	</style>
+  </head>
+ <body>
+  <p>저는 안 보여요~
+  Title1: 간단한 화면 출력
+  </p>
+  <script>
+	var title1 ="대한민국 전국 맛집";
+	var title2 ="지적 대화를 위한 넓고 얕은 지식";
+	var title3 ="베스트셀러 절대로 읽지 마라.";
+  
+	var list= '';
+	
+	list += "<table>";
+	list += "<caption> 베스트셀러 </caption>";
+	list += "<tbody>";
+	list += "<tr>";
+	list += "<th> 순위 </th>" ;
+	list += "<th> 제목 </th>";
+	list += "</tr>";
+	list += "<tr> <td> 1 </td> <td>" + title1 + "</td> </tr>";
+	list += "<tr> <td> 2 </td> <td>" + title2 + "</td> </tr>";
+	list += "<tr> <td> 3 </td> <td>" + title3 + "</td> </tr>";
+	list += "</tbody>";
+	list += "</table>";
+	
+	document.body.innerHTML = list;
+  </script>
+  
+  <p>
+  Title2: 간단한 화면 출력</p>
+ </body>
+</html>

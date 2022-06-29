@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>InnerHTML 속성</title>
+	<meta charset="UTF-8">
+  <script>
+	document.body.innerHTML = '안녕하세요?';
+	//body에 접근해야 하는데 body가 없음(만들어지기도 전에 접근=> body는 null값을 가지게 됨)
+	//Uncaught TypeError: 
+	//	Cannot set properties of null (setting 'innerHTML')
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>if(데이터) 비교</title>
+	<meta charset="UTF-8">
+  <script>
+  //숫자 0, 빈 문자열, null, NaN은 false
+  //데이터가 숫자인 경우, 0 이외의 값은 true, 0은 false
+  if(0)
+	  document.write("if(0) true입니다.<br>");
+  else
+	  document.write("if(0) false입니다.<br>");//false
+
+  
+  if(1)
+	  document.write("if(1) true입니다.<br>");//true
+  else
+	  document.write("if(1) false입니다.<br>");
+
+  //데이터가 문자열인 경우 문자가 빈 문자열이면 false
+ //문자가 하나 이상이면 true
+  if('')
+	  document.write("if('') true입니다.<br>");
+  else
+	  document.write("if('') false입니다.<br>");//false
+  
+  if('호호')
+	  document.write("if('호호') true입니다.<br>");//true
+  else
+	  document.write("if('호호') false입니다.<br>");
+  
+  //데이터가 객체인 경우 항상 true
+  var a={};
+  if(a)
+	  document.write("if({}) true입니다.<br>");//true
+  else
+	  document.write("if({}) false입니다.<br>");
+  
+  //null인 경우 항상 false
+  if(null)
+	  document.write("if(null) true입니다.<br>");
+  else
+	  document.write("if(null) false입니다.<br>");//false
+  
+ //NaN인 경우 false
+  var s='S';
+  if(Number(s))
+	  document.write("if(Number(s)) true입니다.<br>");
+  else
+	  document.write("if(Number(s)) false입니다.<br>");//false
+  </script>
+  </head>
+ <body>
+ </body>
+</html>

@@ -23,6 +23,12 @@
 		-자바스크립트 내에서 HTML문서는 Document라는 객체로 모델링 되어있다.
 		-Document 객체는 웹브라우저와 관련된 객체로 document라는 이름으로 접근할 수 있다.
 		-document.write()라는 명령어는 그대로 화면에 표시되는것이 아니라 HTML문서에 추가되는 것이다.
+		HTML 텍스트를 HTML 문서에 추가하기 위해 document.write() 사용하지만 HTML 문서가 로드되어 
+		출력이 모두 이루어지면 document 객체가 닫히기 때문에 더이상 HTML 텍스트를 추가 출력할 수 없음
+		document 객체가 닫힌 후 document.write()가 실행되게 되면 
+		브라우저는 document 객체에 담긴 현재 문서를 지우고 빈 document를 새로 열기 때문에 
+		현재 HTML 문서가 지워지고 새 문서가 작성되게 됨
+
 		-Method는 객체 안의 함수를 의미한다.
 		 함수(Function)는 특정 작업을 수행하기 위한 독립적으로 만들어진 하나의 단위로 return값이 존재한다.
 		-Function과 Method의 차이점은 Method는 객체에 종속되지만 Function은 객체에 독립적이다.
@@ -33,7 +39,7 @@
   </head>
  <body>
  	안녕하세요, 자바스크립트 세계에 오신것을 환영합니다.<br>
- 	<img src="image/Koala.jpg" onclick="this.src='image/Desert.jpg'"
+ 	<img src="../ex01/image/Koala.jpg" onclick="this.src='../ex01/image/Desert.jpg'"
  	 style="width:300px;height:300px">
  </body>
 </html>
