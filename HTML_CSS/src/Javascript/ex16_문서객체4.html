@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="UTF-8">
+<title>window.onload</title>
+	<script>
+	window.onclick = function(){
+		/*
+		1. 여기서 headerobject 객체를 문서 객체라고 한다.
+		2. getElementByInd()메서드는 DOM 트리에서 id 속성값이 'header'인 DOM 객체를 찾아서 리턴한다.
+		3. id 속성값이 'header'인 객체가 없으면 null을 리턴한다. 
+			같은 값을 가진 객체가 여러개 있다면 HTML 페이지에 가장 먼저 나오는 객체를 리턴한다.
+		*/
+		
+		var headerobject = document.getElementById('header');
+		if(headerobject.style.color=="red"){
+			headerobject.style.color="black"
+		}else{
+			headerobject.style.color="red"
+		}
+	};
+		
+	</script>
+  </head>
+ <body>
+ <h1 id="header">HEADER</h1>
+ </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  </head>
+ <body>
+	<script>
+	/*익명함수는 표현 후에 함수를 호출해야 에러가 없다.*/
+	
+	//함수 자료형 변수명 뒤에 소괄호를 열고 닫으면 함수를 실행하게 된다.
+	//이름 함수를 호출한다 라고 한다.
+	functionVar();
+	//ex12_Function2.html:26 Uncaught TypeError: functionVar is not a function
+	
+	//함수 표현식, 함수의 이름이 없기 때문에 익명함수라고 한다.
+	var functionVar = function (){
+		var output = prompt('숫자를 입력하세요','숫자');
+		alert("입력한 숫자 = " +output);
+	}
+	
+	//functonVar의 자료형 확인하고 내용 확인
+	document.write("typeof(functionVar) = " +typeof(functionVar) + "<br>"
+			+ functionVar);
+	
+	</script>
+ </body>
+</html>

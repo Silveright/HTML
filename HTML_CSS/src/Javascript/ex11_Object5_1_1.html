@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<style>
+	table{text-align:center; margin: 0 auto; border-collapse: collapse; 
+		  width:50%; height:300px}
+	th{ height:30px;
+		background-color: pink;
+	}
+	
+	td,th,tr{ border: 1px solid gray;}
+	
+	
+	caption{font-size: 20px; margin-bottom:10px; font-weight:bolder}
+	</style>
+  </head>
+ <body>
+	<script>
+	//계층적 구조를 갖는 object
+	var book = {
+		title : "수미네 반찬",
+		publisher : "성안당",
+		author : "김수미",
+		price : 15300,
+		info : {
+			pages : 442,
+			date : "2010년 1월 30일",
+			ISBN10 : "8970506470",
+			size : "188*243mm"
+		}
+	};
+	
+	book.print=function() {
+	
+		var list = "<table>";
+			list += "<caption> 서적 정보 </caption>";
+			list += "<tr>";
+			list += "<th> 항목(속성:property) </th>";
+			list += "<th> 내용(값:value) </th>";
+			list += "</tr>";
+
+			for ( var p in this) {//object 자신
+				if (p != 'print') {
+					if (typeof (this[p]) != "object") {
+						list += "<tr>";
+						list += " <td> book." + p + "</td>";
+						list += " <td> " + this[p];
+						if (p == "price")
+							list += "원";
+						list += " </td>";
+						list += " </tr>";
+					} else {
+						for ( var q in this[p]) {
+							list += "<tr>";
+							list += "<td> book." + p + "." + q + " </td>";
+							list += "<td> " + this[p][q];
+							if (q == " pages")
+								list += "페이지";
+							list += "</td>";
+							list += "</tr>";
+						}//for q
+					}//else
+				}//if(p!='print')
+			}//for p
+			list +=  "</table>"
+			document.body.innerHTML += list;
+		}//function
+	
+		book.print();
+	</script>
+ </body>
+</html>

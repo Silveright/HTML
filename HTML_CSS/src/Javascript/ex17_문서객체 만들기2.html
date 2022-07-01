@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>INDEX</title>
+	<!-- 
+		문서 객체 연결 메서드
+		appendChild(node): 객체에 노드를 연결한다.
+		예) 부모.appendChild(neod): 부모의 마지막 자식으로 연결한다.-->
+	<script>
+		window.onload = function () {
+			//변수 선언
+			var img = document.createElement('img');
+			img.src = "../ex01/image/Penguins.jpg";
+			img.width = 300;
+			img.height = 330;
+			img.onclick = function() {
+				alert("이미지 경로는 [" + this.src + "] 입니다.")
+			}
+			
+			//노드를 연결한다.
+			document.body.appendChild(img);
+			
+			var img2 = document.createElement('img');
+			img2.src = "image/Chrysanthemum.jpg";
+			img2.width = 300;
+			img2.height = 330;
+			document.body.appendChild(img2);
+			
+		};
+	</script>
+  </head>
+ <body>
+ </body>
+</html>

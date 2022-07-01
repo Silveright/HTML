@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>DOM Basic</title>
+	<!-- 문서객체 가져오기(1)
+		getElementById(id속성값): 태그의 id 속성값과 일치하는 문서 객체를 가져온다. -->
+	<script>
+		window.onclick = function () {
+			//문서 객체를 가져온다.
+			var header = document.getElementById('header');
+			
+			//문서 객체의 스타일을 바꿔준다
+			header.style.border = '2px solid black';
+			header.style.color = 'orange';
+
+			/* CSS에서 background-color는 하이픈(-) 없애고
+				끊겨진 단어의 첫 글자를 대문자로 변경하면된다.
+				background-color = > backgroundColor
+				*/
+				
+			//
+			header.style.backgroundColor= 'red';
+			//CSS에서의 속성 font-family => fontFamily
+			header.style.fontFamily= '굴림';
+		};
+	</script>
+  </head>
+ <body>
+ <h1 id ="header">Header</h1>
+ </body>
+</html>

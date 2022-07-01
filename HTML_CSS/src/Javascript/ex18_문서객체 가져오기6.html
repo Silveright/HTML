@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>DOM Basic</title>
+	<style>
+	button{
+		width:100px;
+		height:30px;
+		background-color:green;
+		color:white;
+		border:none;
+	}
+	button:hover{
+		opacity:0.7;
+		cursor:pointer;
+	}
+	button:disabled{
+		cursor: not-allowed;
+	}
+	</style>
+	<!-- 문서 객체 가져오기
+		getElementById(id) : 태그의 id와 일치하는 문서 객체를 가져온다.
+		1. 처음 로드시 start버튼은 녹색, stop 버튼은 회색이며 비활성 상태를 만든다.(disabled)
+		2.start 버튼 클릭 시 start 는 회색, 비활성  stop은 녹색
+		3. stop 버튼 클릭 시 start는 녹색, stop은 회색, 비활성
+	 -->
+  </head>
+ <body>
+       start버튼과 stop버튼을 이용한 이미지 변경
+    <br>
+    <img src="image/Koala.jpg" id="flower" 
+         width="500px"         height="500px">
+    <br><button id ="start">start</button>
+    <button id ="stop">stop</button>
+
+	<script>
+			var count=0;
+		
+			//문서 객체를 가져온다.
+			var changeflower = document.getElementById('flower');
+
+			var flowerlist = ['Hydrangeas.jpg','Jellyfish.jpg','Penguins.jpg',
+				'Desert.jpg','Chrysanthemum.jpg'];
+			
+			
+			function change(){
+				/* var path = 'image/' + flowerlist[count%flowerlis.length];
+				   count++;
+				  */
+				var path = 'image/' + flowerlist[count++%flowerlist.length];
+				// count 	0	1	2	3	4	5	6	7	8	9	10
+				//인덱스 위치 0		1	2	3	4	0	1	2	3	4
+				changeflower.src = path;
+			};
+			
+			//버튼 문서 객체들을 가져온다.
+			start = document.getElementById('start');
+			stop = document.getElementById('stop');
+			stop.disabled=true;//로드시 stop버튼 비활성화
+			//로드시 stop버튼의 배경색을 회색으로 설정
+			stop.style.backgroundColor="gray";
+			
+			start.onclick = function(){
+				start_time= setInterval(change,1000);
+				start.disabled=true;//로드시 stop버튼 비활성화
+				start.style.backgroundColor="gray";
+				
+				stop.disabled=false;//로드시 stop버튼 비활성화
+				stop.style.backgroundColor="green";
+			}
+			
+			stop.onclick = function(){
+				clearInterval(start_time);
+				stop.disabled=true;//로드시 stop버튼 비활성화
+				stop.style.backgroundColor="gray";
+				
+				start.disabled=false;
+				start.style.backgroundColor="green";
+			}
+		
+	</script>
+</body>
+</html>

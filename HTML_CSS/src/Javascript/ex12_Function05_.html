@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+	오류발생 :함수 안에서 var로 사용된 변수는 지역변수로 함수 외부에서 사용할 수 없다.
+	 단, 함수 안에서 var를 생략하면 전역 변수로 취급한다.
+	 함수 밖에서 선언된 변수는 var가 있든없든 모두 전역변수로 취급한다.
+  -->
+<html>
+  <head>
+<meta charset="UTF-8">
+	<script>
+	//함수 선언(Function Declaration)
+	function test(name){
+	var output = 'Hello ' + name + ' ..!';
+	document.write(output);
+	}
+	
+	test('자바스크립트');
+	
+	//출력한다.
+	alert(output); //오류발생 : output is not defined
+	
+	</script>
+  </head>
+ <body>
+ 
+ </body>
+</html>

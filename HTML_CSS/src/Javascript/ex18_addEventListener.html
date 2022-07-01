@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>DOM Basic</title>
+  </head>
+ <body>
+	<img src="image/Koala.jpg" id="Koala" 
+         width="500px"         height="500px">
+	<script>
+		var img = document.getElementById('Koala');
+		img.addEventListener("click", function(){
+			img.src = 'image/Hydrangeas.jpg';
+		});
+	</script>
+</body>
+</html>

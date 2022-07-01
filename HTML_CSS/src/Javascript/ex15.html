@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+<meta charset="UTF-8">
+<title>익명함수를 이용한 setInterval()</title>
+  </head>
+ <body>
+	<script>
+      setInterval(function (){
+    	  var today= new Date();
+    	  document.body.innerHTML = today.toLocaleString();
+    	  } , 1000);
+		
+	</script>
+ </body>
+</html>

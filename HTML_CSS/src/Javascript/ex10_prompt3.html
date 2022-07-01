@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>prompt: 사용자로부터 입력 받을 수 있는 대화상자</title>
+  </head>
+ <body>
+ 	<h3>String 객체의 메소드 활용</h3>
+ 	<hr>
+	<script>
+	/*prompt() 함수는 문자열만 입력받을 수 있다.
+		확인=문자열. 취소=null*/
+	
+		var jumin = prompt("주민번호를 입력하세요?","971118-2111111");
+		var test = jumin.substr(7,1);
+		var message = "<h3>String 객체의 메소드 활용</h3><hr> 형식에 맞지 않습니다."
+		if (jumin.length == 14) {
+			if (isNaN(jumin.substring(0, 6))) {
+				alert("앞자리 형식을 확인하세요")
+				document.body.innerHTML = message;
+			} else {
+				if (jumin.charAt(6) == "-") {
+					if (isNaN(jumin.substring(9))) {
+						alert("뒷자리 형식을 확인하세요")
+						document.body.innerHTML = message;
+					} else {
+						if (test == "1" || test == "3") {
+							document.write("남자")
+							document.body.style.background = "skyblue";
+						} else if (test == "2" || test == "4") {
+							document.write("여자")
+							document.body.style.background = "pink";
+						}
+					}
+				} else {
+					alert("앞자리 입력후 -을 입력하세요")
+					document.body.innerHTML = message;
+				}
+			}
+		} else {
+			alert("주민번호의 길이는 14개 입니다.")
+			document.body.innerHTML = message;
+		}
+	</script>
+ </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>DOM Basic</title>
+	<!-- 문서객체 가져오기(1)
+		getElementById(id속성값): 태그의 id 속성값과 일치하는 문서 객체를 가져온다. -->
+	<script>
+		window.onload = function () {
+			//문서 객체를 가져온다.
+			var changeflower = document.getElementById('flower');
+			var flowerlist = ['Hydrangeas.jpg','Jellyfish.jpg','Penguins.jpg',
+				'Desert.jpg','Chrysanthemum.jpg'];
+			
+			var count=0;
+			
+			function change(){
+				/* var path = 'image/' + flowerlist[count%flowerlis.length];
+				   count++;
+				  */
+			var path = 'image/' + flowerlist[count++%flowerlist.length];
+			// count 	0	1	2	3	4	5	6	7	8	9	10
+			//인덱스 위치 0		1	2	3	4	0	1	2	3	4
+			changeflower.src = path;//이전의 this는 changeflower의 함수였기 때문에 가능했다. 
+				
+			};
+			start = setInterval(change,1000); //타이머 아이디: start
+		};
+	</script>
+  </head>
+ <body>
+        이미지를 클릭하면 이미지가 바뀝니다. <br>
+    <img src="image/Koala.jpg" id="flower" 
+         width="500px"         height="500px">
+</body>
+</html>

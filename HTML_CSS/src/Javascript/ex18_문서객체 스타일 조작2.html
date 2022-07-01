@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>DOM Basic</title>
+	<!-- 문서객체 가져오기(1)
+		getElementById(id속성값): 태그의 id 속성값과 일치하는 문서 객체를 가져온다. -->
+	<script>
+		window.onclick = function () {
+			//문서 객체를 가져온다.
+			var header = document.getElementById('header');
+			
+			//CSS에서의 속성처럼 사용할 경우 [] 사용
+			header.style['border'] = '2px solid black';
+			header.style['color']= 'orange';
+			header.style['background-color']= 'red';
+			header.style['font-family']= '굴림';
+		};
+	</script>
+  </head>
+ <body>
+ <h1 id ="header">Header</h1>
+ </body>
+</html>
