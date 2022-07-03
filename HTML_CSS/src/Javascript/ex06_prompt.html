@@ -19,9 +19,11 @@
 	if(answer==null){
 		output +="<style>body{background:yellow}</style>";
 		//document.body.style.background = "yellow"
+		//document.head.innerHTML = "<style>body{background:yellow}</style>"
 	}else{
-		output += "<style>body{background:skyblue}</style>";
+		//output += "<style>body{background:skyblue}</style>";
 		//document.body.style.background = "blue"
+		document.head.innerHTML = "<style>body{background:skyblue}</style>"
 	}
 	document.body.innerHTML = output;
 	</script>

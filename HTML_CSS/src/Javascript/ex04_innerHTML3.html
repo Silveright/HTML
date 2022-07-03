@@ -6,6 +6,8 @@
   </head>
  <body>
   <script>
+  /* innerHTML을 사용하게 되면 기존에 있던 것은 덮어쓰기가 되어버린다. 
+     누적 연산자를 사용하지 않으면 마지막에 작성한 것만 남고 기존의 값은 보이지 않게된다. */
 	document.body.innerHTML = '안녕하세요?';
 	document.body.innerHTML += '날씨가 더워요';
   </script>

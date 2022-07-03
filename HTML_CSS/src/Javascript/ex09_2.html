@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>Welcome to the JavaScript</title>
+  </head>
+ <body>
+	<script>
+	var input=new Date(2022,6,3);
+	var y4 = input.getFullYear();//네자리 년도 
+	var m = input.getMonth() +1;
+	var d = input.getDate();
+	var yoil= input.getDay();
+	var output= y4+"년 " + m+"월 " +d+"일 ";
+	
+	var yoilarray = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+	
+	var color='black';
+	if(yoil==0)
+		color="red"
+		else if(yoil==6)
+		color="blue";
+
+	var pstyle= '<span style= "font-weight:bold; color:' + color + '">'
+	output += pstyle +yoilarray[yoil]+ '</span>';
+	
+	document.body.innerHTML=output
+	</script>
+ </body>
+</html>

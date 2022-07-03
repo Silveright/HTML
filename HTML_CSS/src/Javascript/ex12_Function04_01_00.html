@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+  <head>
+	<script>
+	//함수 선언(Function Declaration)
+	function callTenTimes(i){
+		alert('인자값 = ' + i);
+	}
+	
+	//함수를 호출
+	callTenTimes(0);
+	callTenTimes(1);
+	callTenTimes(2);
+	callTenTimes(3);
+	callTenTimes(4);
+	callTenTimes(5);
+	callTenTimes(6);
+	callTenTimes(7);
+	callTenTimes(8);
+	callTenTimes(9);
+	
+	//익명함수
+	var test = function(){
+		for(var i=0; i<arguments.length; i++)
+		alert(arguments[i]);
+	}
+	test(10,20);
+	</script>
+  </head>
+ <body>
+ 
+ </body>
+</html>
