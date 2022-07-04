@@ -1,0 +1,51 @@
+  <!-- 
+  	디폴트 이벤트: 일부 HTML 태그는 이미 이벤트 리스너가 있다.
+  	이러한 것을 디폴트 이벤트라고 한다.
+  	예를 들어 a태그는 클릭하면 다른 페이지로 이동하는데 이것이 a태그가 가진 디폴트 이벤트이다.
+  	또한 입력 양식의 submit 버튼을 누르면 자동으로 입력 양식을 제출하고 페이지를
+  	새로고침하는 것이 디폴트 이벤트이다.
+  	
+  	디폴트 이벤트 제거하는 방법
+  		//폼 태그
+  	1. obj.onsubmit = function() {
+  			....
+  			return false;
+  		}
+  	2. evemt.preventDefault()를 사용하는 경우
+  		<a href ="" onclick="event.preventDefault()">
+  	
+  	3. function whenSubmit() {
+  			...
+  			return false;
+  		}
+  		<form onsubmit="return whenSubmit()">
+  	  -->
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<link href="css/ex26.css" type="text/css" rel="stylesheet">
+  </head>
+ <body>
+	<form id ="my-form" action="ex18_문서객체 제거.html">
+	<fieldset>
+		<legend>회원가입 폼</legend>
+		<label for="name">이름</label>
+		<input type='text' name='name' id='name'><br>
+		
+		<label for="pass">비밀번호</label>
+		<input type='password' name='pass' id='pass'><br>
+		
+		<label for="name">비밀번호 확인</label>
+		<input type='password' name='pass-check' id='pass-check'><br>
+		
+		<input type='submit' value='제출'>
+	</fieldset>
+	<script>
+    document.getElementById('my-form').onsubmit = function (){
+			return false;//false를 리턴하면 입력양식을 제출하지 않는다.
+	}
+	</script>
+	</form> 
+</body>
+</html>

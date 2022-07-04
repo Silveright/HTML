@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- 
+	~By()형태의 메서드는 현재 윈도우를 기준으로 상대적으로 속성을 변화하는 메서드
+	~To() 형태의 메서드는 절대적인 기준으로 속성을 변화하는 메서드
+	  -->
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<script>
+	var child = window.open('','','width=300, height =200');
+	var width = screen.width;
+	var height =screen.height;
+	
+	child.moveTo(0,0);				//window를 절대적 위치로 이동
+	child.resizeTo(width,height);	//window 크기를 지정
+	</script>
+  </head>
+ <body>
+	브라우저 크기를 화면에 일치시키기
+</body>
+</html>

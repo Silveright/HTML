@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>Event Handling:addEventListener</title>
+	<style>
+	input{
+		outline:none;
+		box-sizing:border-box;
+		width:30px;
+		height:20px;
+	}
+	input:nth-child(1):focus {
+		border: 1px solid red;
+	}
+
+	input:nth-child(2):focus {
+		border: 1px solid green;
+	}
+	
+	#cal{
+		width:25px;
+	}
+	
+	#result{
+		border:2px solid orange;
+	}
+	</style>
+  </head>
+ <body>
+ 	<form>
+	<input id ="op1" type="text" size="2"> +
+	<input id ="op2" type="text" size="2">
+	<input type="button" id="cal" value = "=">
+	<input id="result" type="text" size="2">
+ 	</form>
+	<script>
+		//이벤트 핸들러 - 특정 이벤트가 발생했을 때 실행하고자 하는 자바스크립트 함수
+		function add() {
+			var op1 = document.getElementById('op1').value;
+			var op2 = document.getElementById('op2').value;
+
+			var result = document.getElementById('result');
+			result.value=parseInt(op1) + parseInt(op2);
+			result.style.backgroundColor ="orange";
+		}
+		var cal = document.getElementById('cal');
+		cal.addEventListener('click', add);
+	</script>
+</body>
+</html>

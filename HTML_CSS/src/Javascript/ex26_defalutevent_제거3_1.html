@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<link href="css/ex26.css" type="text/css" rel="stylesheet">
+  </head>
+ <body>
+	<form onsubmit="return whenSubmit()" action="ex18_문서객체 제거.html">
+	<fieldset>
+		<legend>회원가입 폼</legend>
+		<label for="name">이름</label>
+		<input type='text' name='name' id='name'><br>
+		
+		<label for="pass">비밀번호</label>
+		<input type='password' name='pass' id='pass'><br>
+		
+		<label for="name">비밀번호 확인</label>
+		<input type='password' name='pass-check' id='pass-check'><br>
+		
+		<input type='submit' value='제출'>
+	</fieldset>
+	<script>
+   
+		function whenSubmit() {
+			var name = document.getElementById('name');
+			var pw = document.getElementById('pass');
+			var pcheck = document.getElementById('pass-check');
+			//string의 trim메서드로 공백제거한다. string 형을 if문에 쓰게되면 반환타입이 true, false
+			//빈문자열이 들어온다면
+			if (!name.value.trim()) {
+				alert('이름을 입력하세요');
+				name.focus();
+				return false;//false를 리턴하면 입력양식을 제출하지 않는다.
+			} else if (pw.value.trim() == '') {
+				alert('비밀번호를 입력하세요');
+				pw.focus();
+				return false;
+			} else if (pcheck.value.trim() == '') {
+				alert('비밀번호 확인을 입력하세요');
+				pcheck.focus();
+				return false;
+			}
+				if (pw.value == pcheck.value) {
+					alert('성공');
+				} else {
+					alert('비밀번호가 다릅니다. 다시 입력해주세요');
+					pcheck.value = '';
+					pcheck.focus();
+					return false;
+				}
+			
+		};
+	</script>
+	</form> 
+</body>
+</html>

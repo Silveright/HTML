@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>radio 버튼: 이미지 변경</title>
+  </head>
+<!-- 
+ -->
+ <body>
+	<div>radio 버튼을 클릭하면 이미지가 바뀝니다.</div>
+	 <hr>
+	<form>
+	 <label><input type="radio" name = "icon" value = 'image/image1.png'>image1</label>
+	 <label><input type="radio" name = "icon" value = 'image/image2.png' checked>image2</label>
+	 <label><input type="radio" name = "icon" value = 'image/image3.png'>image3</label><br>
+	<img src='image/image2.png' id='iconImg'>
+	</form>	
+	<script>
+	var icons = document.getElementsByName('icon');
+	for(var i=0; i<icons.length;i++){
+		icons[i].addEventListener('click',change);
+	}
+	
+	function change(){
+		var image= document.getElementById('iconImg');
+		for(var i=0; i<icons.length;i++){
+			if(icons[i].checked)
+				image.src='image/image'+(i+1)+".png"
+		}
+	}
+	
+	/* function change(e){
+
+		var image= document.getElementById('iconImg');
+
+		if(this.value=='image/image1.png')
+
+			image.src='image/image1.png';
+
+		if(this.value=='image/image2.png')
+
+			image.src='image/image2.png';
+
+		if(this.value=='image/image3.png')
+
+			image.src='image/image3.png';
+
+	} */
+	</script>
+</body>
+</html>

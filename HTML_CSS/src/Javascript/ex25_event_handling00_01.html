@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>Event Handling</title>
+  </head>
+ <body>
+ 	<form>
+	<input id ="op1" type="text" size="2"> +
+	<input id ="op2" type="text" size="2">
+	<input type="button" value = "=" onclick="add();">
+	<input id="result" type="text" size="2">
+ 	</form>
+	<script>
+		function add() {
+			var op1 = document.getElementById('op1');
+			var op2 = document.getElementById('op2');
+			var result = document.getElementById('result');
+			result.value =Number(op1.value) + Number(op2.value);
+		}
+	</script>
+</body>
+</html>
