@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>radio 버튼: 이미지 변경</title>
+  </head>
+<!-- 
+ -->
+ <body>
+	<div>radio 버튼을 클릭하면 이미지가 바뀝니다.</div>
+	 <hr>
+	<form>
+	 <label><input type="radio" name = "icon" value = 'image/image1.png'>image1</label>
+	 <label><input type="radio" name = "icon" value = 'image/image2.png' checked>image2</label>
+	 <label><input type="radio" name = "icon" value = 'image/image3.png'>image3</label><br>
+	<img src='image/image2.png' id='iconImg'>
+	</form>	
+	<script>
+	var icons = document.getElementsByName('icon');
+	for(var i=0; i<icons.length;i++){
+		icons[i].addEventListener('click',change);
+	}
+	
+	//e: 내부적으로 window.event를 전달 받은 것 (event 객체 정보가 window에 있으니까..)
+	function change(e){
+		var img = document.getElementById('iconImg');
+		img.src= this.value;
+	}//icon[i] 객체:this
+	
+	</script>
+</body>
+</html>
